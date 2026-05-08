@@ -64,3 +64,6 @@ Here is how you can test and verify the security mitigations implemented in `app
 ### 5. Data and Transit Encryption
 * **In Transit:** Notice that `app_secure.py` runs on `https://` instead of `http://`, ensuring all network traffic is encrypted using TLS/SSL.
 * **At Rest:** Open `secure_app.db` using an SQLite viewer. Look at the `bio` column for any user. The data is unreadable because it has been symmetrically encrypted using the `Fernet` library. It is only decrypted seamlessly when rendered on the dashboard.
+
+## Acknowledgments
+As part of our academic integrity, we would like to acknowledge the use of AI in writing this documentation. AI assisted us in achieving the standard GitHub formatting for this README file, so it appears more professional and also easier to read. And to help generate the standard command-line instructions for setting up and running the application.
