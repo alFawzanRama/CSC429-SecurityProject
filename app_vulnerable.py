@@ -116,10 +116,10 @@ def register():
         cursor = conn.cursor()
 
         # Vulnerability: SQL Injection because user input is concatenated directly
-        query = f"""
+        query = f'
         INSERT INTO users (username, password, role, bio)
-        VALUES ('{username}', '{hashed_password}', 'user', '{bio}')
-        """
+        VALUES ("{username}", "{hashed_password}", "user", "{bio}")
+        '
         cursor.execute(query)
 
         conn.commit()
